@@ -1,5 +1,6 @@
 - Getting started
 
+  - [Amorphie](getting-started/amorphie.md)
   - [Setup](getting-started/setup.md)
   - [Architecture](getting-started/architecture.md)
   - [Identity & Access Management](iam.md)

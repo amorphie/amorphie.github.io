@@ -2,7 +2,7 @@
 
 # Amoprhie 
 
-> Dijital Customer Management Platform
+> Dijital Channel Management Platform
 
 - Identity & Access Management
 - Workflow Engine
@@ -12,4 +12,4 @@
 
 
 [GitHub](https://github.com/amorphie)
-[Get Started](#amoprhie)
+[Get Started](getting-started/amorphie.md)
