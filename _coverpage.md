@@ -12,4 +12,4 @@
 
 
 [GitHub](https://github.com/amorphie)
-[Get Started](readme.md)
+[Get Started](#amoprhie)
