@@ -1,3 +1,5 @@
+# Contribution
+
 If you want to develop a project in the Amorphie ecosystem. You can develop according to our folder structure by using the Amorphie template project "https://github.com/amorphie/template". You just need to select this template when creating a new repo, the default project and folder structure used in all amorphie projects will automatically appear. Thus, you will be able to have a standard project structure and you will not have to deal with configurations.
 
 Below you can find detailed explanations of the project and folder structures;
