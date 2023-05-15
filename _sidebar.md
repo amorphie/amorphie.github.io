@@ -45,3 +45,6 @@
     - [How to validate document set](dms/guides/validate-document-set.md)
 
 - Credits
+    - Contribution
+      - [Add new project](contribution.md)
+

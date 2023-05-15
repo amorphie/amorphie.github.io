@@ -15,4 +15,4 @@ Below you can find detailed explanations of the project and folder structures;
 * thunder-tests -> HTTP requests of the project in Vs code in thunder client
 
 The above files and folders have been added to provide a template structure for developing projects in the Amorphie ecosystem.
-You can add or subtract according to the needs of the project.
+You can add or subtract according to the needs of the project.I
