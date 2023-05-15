@@ -9,12 +9,12 @@
 
 - Identity & Access Management
   - [Featrues](iam/features.md)
-  - [Users](iam/users.md)
-  - [Roles](iam/roles.md)
-  - [Clients](iam/clients.md)
-  - [Scopes](iam/scopes.md)
-  - [Consents](iam/consents.md)
-  - [Resources](iam/resources.md)
+  - [User](iam/user.md)
+  - [Role](iam/roles.md)
+  - [Client](iam/clients.md)
+  - [Scope](iam/scopes.md)
+  - [Consent](iam/consents.md)
+  - [Resource](iam/resources.md)
   
   - Guides
     - [How to add a new client](iam/guides/add-client.md)
