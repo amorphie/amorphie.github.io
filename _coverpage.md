@@ -1,6 +1,6 @@
 ![logo](_media/icon.svg)
 
-# Amoprhie 
+# Amorphie 
 
 > Dijital Channel Management Platform
 
