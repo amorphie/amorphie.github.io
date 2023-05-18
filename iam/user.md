@@ -79,7 +79,7 @@ Users are people who can log into your system. They can act on their own behalf 
 ```
 
 ## Passwords
-Kullanıcı, birden çok farklı platform için birçok parolaya sahip olabilir. The password of type "*password*" is used by default for the password grant type. Different grant types are given for verification with other passwords.
+The user can have many passwords for multiple different platforms. The password of type "*password*" is used by default for the password grant type. Different grant types are given for verification with other passwords.
 
 The security algorithm and salt value of each password definition can be defined. Thus, it allows the passwords in different systems to be migrated.
 

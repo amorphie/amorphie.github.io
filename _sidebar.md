@@ -11,11 +11,11 @@
 - Identity & Access Management
   - [Featrues](iam/features.md)
   - [User](iam/user.md)
-  - [Role](iam/roles.md)
-  - [Client](iam/clients.md)
-  - [Scope](iam/scopes.md)
-  - [Consent](iam/consents.md)
-  - [Resource](iam/resources.md)
+  - [Client](iam/client.md)
+  - [Role](iam/role.md)
+  - [Scope](iam/scope.md)
+  - [Consent](iam/consent.md)
+  - [Resource](iam/resource.md)
   
   - Guides
     - [How to add a new client](iam/guides/add-client.md)
@@ -40,6 +40,10 @@
     - [Versions](dms/Versions.md)
     - [Document Types](dms/features.md)
     - [Document Sets](dms/features.md)
+
+- Shared Services
+    - Tag
+    - Template Engine
 
 - Guides
     - [How to validate document set](dms/guides/validate-document-set.md)
