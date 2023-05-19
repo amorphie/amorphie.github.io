@@ -113,7 +113,7 @@ If left blank, the client can request access to all scopes.
 
 * **Login URL** is client login URI. In some cases, Amorphie can redirect to client application's login page.
 * **Return URI** is endpoint of client. After a user logged Amorphie SSO Application, user is redirected to return URL with authorization code.
-* **Return URI** is endpoint of client. If the user is logged out or is logged out by someone else (such as for a fraudulent reason), the client is notified by calling the logout uri.
+* **Logout URI** is endpoint of client. If the user is logged out or is logged out by someone else (such as for a fraudulent reason), the client is notified by calling the logout uri.
 
 All URIs are optional for client definitions.
 
@@ -133,12 +133,12 @@ Signature should supplied as http header.
 
 
 ```json
-  "jws": {
-    "mode":"must",
-    "header": "X-JWS-Signature",
-    "secret": "22769d4d21e345ff8de5211f959eba51",
-    "algorithm": "HS384"
-  }
+"jws": {
+  "mode":"must",
+  "header": "X-JWS-Signature",
+  "secret": "22769d4d21e345ff8de5211f959eba51",
+  "algorithm": "HS384"
+}
 ```
 
 ## Flows
@@ -151,11 +151,11 @@ Client uses this grant flow for authorization.
 
 
 ```json
-  {
-      "type": "login",
-      "workflow": "login-mobile-user",
-      "token-duration": "5m"
-  }
+{
+  "type": "login",
+  "workflow": "login-mobile-user",
+  "token-duration": "5m"
+}
 ```
 
 **Highlights**
@@ -167,11 +167,11 @@ Client uses this grant flow for authorization.
 Client uses this grant flow for registration process.  
 
 ```json
- {
-      "type": "register",
-      "workflow": "register-mobile-user",
-      "token-duration": "5m"
- }
+{
+  "type": "register",
+  "workflow": "register-mobile-user",
+  "token-duration": "5m"
+}
 ```
 
 **Highlights**
@@ -183,10 +183,10 @@ Client uses this grant flow for registration process.
 #### Flow Type: `consent`
 If user try to access to requested scope first time, consent flow triggered after login successful completion of login flow.
 ```json
-  {
-    "type": "consent",
-    "workflow": "mobile-user-consent",
-  }
+{
+  "type": "consent",
+  "workflow": "mobile-user-consent",
+}
 ```
 **Highlights**
 * It is optional.
@@ -198,17 +198,17 @@ If user try to access to requested scope first time, consent flow triggered afte
 Workflows such as resetting password, changing mobile number, unpairing mobile phone are considered support flows
 
 ```json
-  {
-    "type": "support",
-    "workflow": "reset-password",
-    "token": "flow",
-    "token-duration": "5m"
-  },
-  {
-    "type": "support",
-    "token": "access",
-    "workflow": "change-mobile-number"
-  }
+{
+  "type": "support",
+  "workflow": "reset-password",
+  "token": "flow",
+  "token-duration": "5m"
+},
+{
+  "type": "support",
+  "token": "access",
+  "workflow": "change-mobile-number"
+}
 ```
 **Highlights**
 * It is optional.
@@ -222,17 +222,17 @@ Tokens are RFC 7519 compliant JSON Web Token (JWT). Amorphie uses only JWT beare
 
 
 ```json
- {
-      "type": "identity",
-      "duration": "5m",
-      "claims": [
-        "user.reference",
-        "user.mobile-phone",
-        "user.tags.customer.email",
-        "user.tags.customer.campaign- permission",
-        "scope.tags.corporate-customer.tax-no"
-      ]
-    },
+{
+  "type": "identity",
+  "duration": "5m",
+  "claims": [
+    "user.reference",
+    "user.mobile-phone",
+    "user.tags.customer.email",
+    "user.tags.customer.campaign- permission",
+    "scope.tags.corporate-customer.tax-no"
+  ]
+}
 ```
 **Highlights**
 * A duration definition should be made for each token.
