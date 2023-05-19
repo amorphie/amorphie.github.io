@@ -2,7 +2,7 @@
 
 Roles and permissions allows you to control authorization on your resources.
 
-Roles Group allows you to group roles.  And also Role Group is assigned to scope  for limit to available roles. This means that different scopes can manage with different sets of roles.
+Roles Group allows you to group roles. And also Role Group is assigned to scope for limit to available roles. This means that different scopes can manage with different sets of roles.
 
 ## Role Group Model
 
@@ -23,7 +23,7 @@ Roles Group allows you to group roles.  And also Role Group is assigned to scope
     "name": "merchant",
     "roles": [
       "product-read",
-      "product-modify-merchant",   
+      "product-modify-merchant",
       "self-basket-create",
       "self-basket-checkout",
       "self-order-tracking",
@@ -33,7 +33,7 @@ Roles Group allows you to group roles.  And also Role Group is assigned to scope
 ]
 ```
 
-## Role  Model
+## Role Model
 
 ```json
 [
@@ -64,7 +64,7 @@ Roles Group allows you to group roles.  And also Role Group is assigned to scope
     ]
   }
 ]
-``` 
+```
 
 #### Highlights
 
@@ -84,7 +84,7 @@ Simple templating is used to access request and token data during querying.
 
 Samples
 
-```js  
+```
 {{ $token.user.tags.customer.province }} // Accesses the province contained in the customer tag data of the customer who owns the token.
 
 {{ $request.body.id }} // Accesses id from request body data
