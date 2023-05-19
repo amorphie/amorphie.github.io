@@ -42,14 +42,15 @@ There is the concept of **variant** for compatibility with 3rd party gateways (l
     "staff"
   ],
   "login-url": "https://acme.com/oauth/login",
-  "return-url": "https://acme.com/oauth/authorized",
-  "post-logout-url": "https://acme.com/oauth/logout",
+  "return-uri": "https://acme.com/oauth/authorized",
+  "logout-uri": "https://acme.com/oauth/logout",
   "client-secret": "a1510240a9a747dc86067cfdfe83121ba1510240a9a747dc86067cfdfe83121b",
   "pkce": "must",
   "jws": {
+    "mode":"must",
     "header": "X-JWS-Signature",
     "secret": "22769d4d21e345ff8de5211f959eba51",
-    "algirthm": "HS384"
+    "algorithm": "HS384"
   },
   "idempotency": {
     "mode": "alert",
@@ -90,6 +91,54 @@ There is the concept of **variant** for compatibility with 3rd party gateways (l
     }
   ]
 }
+```
+
+#### Highlights
+
+##### Allowed Scopes
+
+Allowed scopes for the client, defined as allowed scope tags. 
+If left blank, the client can request access to all scopes.
+
+?> Tags on scopes allow scopes to be grouped
+
+```json
+  "allowed-scope-tags": [
+    "retail-customer",
+    "corporate-customer",
+    "staff"
+  ],
+```
+##### URL Definitions
+
+* **Login URL** is client login URI. In some cases, Amorphie can redirect to client application's login page.
+* **Return URI** is endpoint of client. After a user logged Amorphie SSO Application, user is redirected to return URL with authorization code.
+* **Return URI** is endpoint of client. If the user is logged out or is logged out by someone else (such as for a fraudulent reason), the client is notified by calling the logout uri.
+
+All URIs are optional for client definitions.
+
+```json
+  "login-url": "https://acme.com/oauth/login",
+  "return-uri": "https://acme.com/oauth/authorized",
+  "logout-uri": "https://acme.com/oauth/logout",
+```
+
+##### PKCE
+[Proof Key for Code Exchange](https://oauth.net/2/pkce/#:~:text=RFC%207636%3A%20Proof%20Key%20for%20Code%20Exchange&text=PKCE%20(RFC%207636)%20is%20an,secret%20or%20other%20client%20authentication) configuration only two values are allowed.  If **must** is configured, Client must request authorization with the code challenge hashed as SHA256. If left blank or **optional**, validation can be used optionally.
+
+##### JWS
+[JSON Web Signature](https://www.rfc-editor.org/rfc/rfc7515) validation can be configured for client. If client has to supply signature for every request **mode** must be set to **must**. If **mode** is empty or is set to **optional** signature validation is only occur when signature supplied.
+
+Signature should supplied as http header. 
+
+
+```json
+  "jws": {
+    "mode":"must",
+    "header": "X-JWS-Signature",
+    "secret": "22769d4d21e345ff8de5211f959eba51",
+    "algorithm": "HS384"
+  }
 ```
 
 ## Flows
