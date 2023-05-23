@@ -4,7 +4,7 @@ Scope is a way to limit an app’s access to a user’s data. Scope is a way to 
 
 For example, in the banking sector, we can accept all your individual and corporate customers and partner companies as a scope. Thus, users can make transactions with a single login for both their own customer accounts and the accounts of the companies they work for. For example, bank employees can make transactions both on their own accounts and on behalf of the customers of the branch they work for.
 
-# Model
+## Model
 
 ```json
 [
@@ -85,15 +85,15 @@ For example, in the banking sector, we can accept all your individual and corpor
 ]
 ```
 
-#### Highlights
+## Highlights
 
-##### Role Group
+### Role Group
 Role group selection for scope refers to the process of defining and assigning roles within a project or organization based on the specific scope of work. It involves creating a flexible structure where roles can be tailored to meet the requirements and objectives of a particular project or initiative.
 
 The purpose of role group selection for scope is to ensure that individuals are assigned roles that align with their skills, expertise, and responsibilities within the defined scope of work. By customizing roles based on the specific project requirements, organizations can optimize team performance and enhance overall project success.
 
 
-##### Consent
+### Consent
 When accessing the scope for the first time, obtaining consent is a common practice to ensure compliance with privacy and data protection regulations, as well as to respect individuals' rights and preferences. Consent is obtained from the individuals whose data or information is being accessed or processed within the defined scope. This process is typically known as obtaining "informed consent."
 
 Obtaining consent for accessing the scope can be facilitated through two different approaches, as you described:
