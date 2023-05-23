@@ -1,6 +1,9 @@
 - Getting started
 
-  - [Amorphie](getting-started/amorphie.md)
+  - [What is Amorphie](getting-started/amorphie.md)
+  - [Amorphie in Banking](getting-started/in-banking.md)
+  - [Amorphie in eCommerce](getting-started/in-commerce.md)
+
   - [Setup](getting-started/setup.md)
   - [Architecture](getting-started/architecture.md)
   - [Identity & Access Management](iam.md)
@@ -15,7 +18,6 @@
   - [Role](iam/role.md)
   - [Scope](iam/scope.md)
   - [Consent](iam/consent.md)
-  - [Resource](iam/resource.md)
   
   - Guides
     - [How to add a new client](iam/guides/add-client.md)
@@ -45,8 +47,8 @@
     - Tag
     - Template Engine
 
-- Guides
-    - [How to validate document set](dms/guides/validate-document-set.md)
+- Operations
+    - Kubernetes Setup
 
 - Credits
     - Contribution

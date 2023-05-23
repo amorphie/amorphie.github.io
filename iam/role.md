@@ -91,3 +91,4 @@ Samples
 
 {{ $request.query.reference }} // Accesses reference from request query params
 ```
+# Scope

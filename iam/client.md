@@ -22,10 +22,6 @@ There is the concept of **variant** for compatibility with 3rd party gateways (l
       "token-duration": "5m"
     },
     {
-      "type": "consent",
-      "workflow": "mobile-user-consent"
-    },
-    {
       "type": "support",
       "workflow": "reset-password",
       "token": "flow",
@@ -181,16 +177,6 @@ Client uses this grant flow for registration process.
 - Uses **flow** token type.
 - Token duration can be configured per flow.
 
-#### Flow Type: `consent`
-
-If user try to access to requested scope first time, consent flow triggered after login successful completion of login flow.
-
-```json
-{
-  "type": "consent",
-  "workflow": "mobile-user-consent"
-}
-```
 
 **Highlights**
 
