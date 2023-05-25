@@ -73,10 +73,10 @@ IBBTIdentity interface has been added in order to get the information of users w
 ## RestApi
 In order for all APIs to be standard in the project, BaseBBTRouteRepository must be derived. The following methods are created automatically in APIs derived from this class.
 
-/{apiname}/{id} -> (GET) Returns entity with id
-/{apiname}/?page={page}&pageSize={pageSize} ->.(GET) Returns all entities according to page and pagesize
-/{apiname}/ -> (POST) It performs the insert or update operation according to the DTO model posted.
-/{apiname}/{id} -> (DELETE) Deletes entity with id.
+/{apiname}/{id} -> (GET) Returns entity with id <br />
+/{apiname}/?page={page}&pageSize={pageSize} ->.(GET) Returns all entities according to page and pagesize <br />
+/{apiname}/ -> (POST) It performs the insert or update operation according to the DTO model posted. <br />
+/{apiname}/{id} -> (DELETE) Deletes entity with id. <br />
 
 ```
 public abstract class BaseBBTRouteRepository<
