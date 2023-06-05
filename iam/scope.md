@@ -1,3 +1,21 @@
+# Definition
+In OAuth 2.0, a scope is a mechanism used to define and limit the permissions and access rights granted to a client application when accessing protected resources on behalf of a resource owner (user).
+
+The purpose of scopes in OAuth 2.0 is to ensure that clients have explicit permission from the resource owner to access specific resources or perform certain actions. Scopes allow for fine-grained control over the access privileges granted to client applications, promoting security and protecting user data.
+
+Scopes are defined by the resource server and are specific to the particular API or service being accessed. They represent a set of permissions or actions that a client application may request during the authorization process. Scopes can vary depending on the API or service and can be defined in a granular manner to provide precise control over the requested access.
+
+During the OAuth 2.0 authorization process, the client application includes the requested scope(s) in the authorization request to the authorization server. The resource owner is then presented with the requested scope(s) and can choose to grant or deny the client's access based on the permissions being requested.
+
+Examples of scopes in OAuth 2.0 could include:
+* read: Grants read-only access to specific resources.
+* write: Grants write access to specific resources, allowing the client to modify or create new data.
+* profile: Grants access to the user's profile information.
+* email: Grants access to the user's email address.
+* offline_access: Grants the ability to access protected resources even when the resource owner is not present or authenticated.
+
+By utilizing scopes, OAuth 2.0 allows for flexible and controlled access to protected resources, ensuring that client applications only have the necessary permissions required for their intended functionality and that resource owners have control over the access privileges granted to client applications.
+
 # Scope
 
 Scope is a way to limit an app’s access to a user’s data. Scope is a way to limit what an application can do within the context of what a user can do.
