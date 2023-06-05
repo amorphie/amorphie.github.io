@@ -1,3 +1,24 @@
+# Definition
+In OAuth 2.0, Client represents an application or service that wants to access protected resources on behalf of an end-user. The client is an essential component in the OAuth 2.0 framework and plays a crucial role in the authorization process.
+
+The purpose of the client in OAuth 2.0 is to initiate the authorization process and obtain authorization from the resource owner (end-user) to access their protected resources. The client can be a web application, a mobile application, a server-side application, or any other software component that needs to access protected resources.
+
+The client is typically registered with the authorization server, and during the authorization process, it interacts with both the authorization server and the resource server. Here's a high-level overview of the OAuth 2.0 flow involving the client:
+
+1. Registration: The client registers itself with the authorization server. This registration involves providing information about the client, such as its client ID, client secret (in some cases), redirect URIs, and supported grant types.
+
+2. Authorization Request: The client initiates the authorization process by redirecting the resource owner to the authorization server. This request includes the client ID, requested scope, and redirect URI.
+
+3. User Consent: The resource owner is presented with an authorization prompt, where they can review the requested permissions (scope) and grant or deny access to the client.
+
+4. Authorization Grant: If the resource owner grants access, the authorization server issues an authorization grant to the client, typically in the form of an authorization code or an access token.
+
+5. Token Request: The client exchanges the authorization grant for an access token by making a token request to the authorization server. This request typically includes the client credentials (client ID and client secret) and the authorization grant.
+
+6. Access Protected Resources: The client uses the obtained access token to authenticate itself and access the protected resources from the resource server on behalf of the resource owner.
+
+By acting as an intermediary between the resource owner and the resource server, the client enables secure and controlled access to protected resources without requiring the resource owner to share their credentials directly with the client. This separation of concerns improves security and allows users to control the access privileges granted to client applications.
+
 # Client
 
 Clients are entities that can request Amorphie to authenticate a user. Most often, clients are applications and services that want to use Amorphie to secure clients and provide a single sign-on solution.
