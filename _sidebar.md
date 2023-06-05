@@ -18,7 +18,7 @@
   - [Role](iam/role.md)
   - [Scope](iam/scope.md)
   - [Consent](iam/consent.md)
-  
+  - [Flow](iam/flow.md)
   - Guides
     - [How to add a new client](iam/guides/add-client.md)
     - [How to add a new scope](iam/guides/add-scope.md)
