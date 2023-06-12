@@ -54,6 +54,7 @@ There is the concept of **variant** for compatibility with 3rd party gateways (l
       "workflow": "change-mobile-number"
     }
   ],
+  "allowed-grant-types": ["authorization_code", "password", "refresh_token"],
   "allowed-scope-tags": ["retail-customer", "corporate-customer", "staff"],
   "login-url": "https://acme.com/oauth/login",
   "return-uri": "https://acme.com/oauth/authorized",
@@ -112,7 +113,7 @@ There is the concept of **variant** for compatibility with 3rd party gateways (l
 Allowed scopes for the client, defined as allowed scope tags.
 If left blank, the client can request access to all scopes.
 
-?> Tags on scopes allow scopes to be grouped
+Tags on scopes allow scopes to be grouped
 
 ```json
   "allowed-scope-tags": [
@@ -136,12 +137,11 @@ All URIs are optional for client definitions.
   "logout-uri": "https://acme.com/oauth/logout",
 ```
 
-##### PKCE
-
-[Proof Key for Code Exchange](<https://oauth.net/2/pkce/#:~:text=RFC%207636%3A%20Proof%20Key%20for%20Code%20Exchange&text=PKCE%20(RFC%207636)%20is%20an,secret%20or%20other%20client%20authentication>) configuration only two values are allowed. If **must** is configured, Client must request authorization with the code challenge hashed as SHA256. If left blank or **optional**, validation can be used optionally.
+##### PKCE [Proof Key for Code Exchange]
+This attribute specifies whether Proof Key for Code Exchange (PKCE) is required for authorization code grant type flows. "must" indicates that PKCE is mandatory for this client.
+(<https://oauth.net/2/pkce/#:~:text=RFC%207636%3A%20Proof%20Key%20for%20Code%20Exchange&text=PKCE%20(RFC%207636)%20is%20an,secret%20or%20other%20client%20authentication>) configuration only two values are allowed. If **must** is configured, Client must request authorization with the code challenge hashed as SHA256. If left blank or **optional**, validation can be used optionally.
 
 ##### JWS
-
 [JSON Web Signature](https://www.rfc-editor.org/rfc/rfc7515) validation can be configured for client. If client has to supply signature for every request **mode** must be set to **must**. If **mode** is empty or is set to **optional** signature validation is only occur when signature supplied.
 
 Signature should supplied as http header.
@@ -154,9 +154,35 @@ Signature should supplied as http header.
   "algorithm": "HS384"
 }
 ```
+1. "mode": "must"
+This attribute specifies the mode of JWS usage. In this case, "must" indicates that JWS is mandatory for the client.
+
+2. "header": "X-JWS-Signature"
+This attribute represents the header name where the JWS signature will be included. In this case, it is set to "X-JWS-Signature".
+
+3. "secret": "22769d4d21e345ff8de5211f959eba51"
+This attribute contains the secret key used for JWS signing and verification. The secret key is a shared secret between the client and the server. It is used to sign the data and validate the integrity of the message.
+
+4. "algorithm": "HS384"
+This attribute specifies the algorithm used for JWS signature generation and verification. In this case, "HS384" refers to HMAC-SHA384, which is a symmetric cryptographic algorithm using a secret key for signing and verification.
+
+Commonly used JWS signature generation algorithms:
+
+1. HMAC-SHA256 (HS256): This algorithm uses HMAC-SHA256 for symmetric key-based signing and verification.
+2. HMAC-SHA384 (HS384): This algorithm uses HMAC-SHA384 for symmetric key-based signing and verification.
+3. HMAC-SHA512 (HS512): This algorithm uses HMAC-SHA512 for symmetric key-based signing and verification.
+4. RSA-SHA256 (RS256): This algorithm utilizes RSA asymmetric key pairs for signing and verification, using SHA-256 as the hash function.
+5. RSA-SHA384 (RS384): This algorithm uses RSA asymmetric key pairs for signing and verification, with SHA-384 as the hash function.
+6. RSA-SHA512 (RS512): This algorithm uses RSA asymmetric key pairs for signing and verification, using SHA-512 as the hash function.
+7. ECDSA-SHA256 (ES256): This algorithm employs the Elliptic Curve Digital Signature Algorithm (ECDSA) with the NIST P-256 curve for signing and verification, using SHA-256 as the hash function.
+8. ECDSA-SHA384 (ES384): This algorithm uses ECDSA with the NIST P-384 curve for signing and verification, with SHA-384 as the hash function.
+9. ECDSA-SHA512 (ES512): This algorithm employs ECDSA with the NIST P-521 curve for signing and verification, using SHA-512 as the hash function.
+10. RSA-PSS-SHA256 (PS256): RSA Probabilistic Signature Scheme (RSA-PSS) with SHA-256 as the hash function is used for signing and verification.
+11. RSA-PSS-SHA384 (PS384): RSA-PSS with SHA-384 as the hash function is used for signing and verification.
+12. RSA-PSS-SHA512 (PS512): RSA-PSS with SHA-512 as the hash function is used for signing and verification.
 
 ## Flows
-
+This attribute defines the different flows or scenarios in which the client will interact with the authorization server.
 Grant and other flows are developed with Amorphie Workflow Engine. Workflow Engine allows to create multi factor, multi page authentication flows easily.
 
 Available flow types are;
