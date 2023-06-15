@@ -265,11 +265,11 @@ Tokens are RFC 7519 compliant JSON Web Token (JWT). Amorphie uses only JWT beare
   "type": "identity",
   "duration": "5m",
   "claims": [
-    "user.reference",
-    "user.mobile-phone",
-    "user.tags.customer.email",
-    "user.tags.customer.campaign- permission",
-    "scope.tags.corporate-customer.tax-no"
+        "user.reference",
+        "user.mobile-phone",
+        "tag.idm.user.customer.email",
+        "tag.idm.user.customer.campaign-permission",
+        "tag.idm.scope.corporate-customer.tax-no"
   ]
 }
 ```
