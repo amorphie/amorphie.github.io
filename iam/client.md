@@ -92,9 +92,9 @@ There is the concept of **variant** for compatibility with 3rd party gateways (l
       "claims": [
         "user.reference",
         "user.mobile-phone",
-        "user.tags.customer.email",
-        "user.tags.customer.campaign- permission",
-        "scope.tags.corporate-customer.tax-no"
+        "tag.idm.user.customer.email",
+        "tag.idm.user.customer.campaign-permission",
+        "tag.idm.scope.corporate-customer.tax-no"
       ]
     },
     {
