@@ -59,3 +59,17 @@ it is essential to include specific information about the scope, client, and use
   "state": "active"
 }
 ```
+
+!> All data will be transmitted as header to upstream for every request.
+
+```html
+X-User-ID :  g664d72c-1408-4307-973c-bd74e3d8a185
+X-User-Reference :  38653069009
+X-Scope-ID :  a664d72c-1408-4307-973c-bd74e3d8a185
+X-Scope-Reference :  38653069009
+X-Client-ID :  a664d72c-1408-4307-973c-bd74e3d8a185
+X-Client-Name :  BKM
+X-Client-Variant :  Akbank
+X-Consent-Data-Documents : "...json..."
+X-Consent-Data-Accounts : "[ \"195f2ab8-8d4f-40c8-b4f9-3fac0f254c49\",  \"ddac1206-0413-4dc3-8ddd-e982fac8b472\",  \"a2ae3bb4-4024-4627-bd87-ac63893dd8e3\",  \"949602de-b893-4d07-a662-cc005a1c99b6\",  \"7947834b-96a7-48e1-9034-546aa2db0f9e\"]"
+```
