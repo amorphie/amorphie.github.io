@@ -62,7 +62,7 @@ it is essential to include specific information about the scope, client, and use
 
 !> All data will be transmitted as header to upstream for every request.
 
-```markup
+```ssml
 X-User-Reference :  38653069009
 X-Scope-Reference :  38653069009
 X-Client-Name :  BKM
@@ -75,15 +75,15 @@ X-Consent-Data-Accounts : "[ \"195f2ab8-8d4f-40c8-b4f9-3fac0f254c49\",  \"ddac12
 !> Some scopes allow to access more than one master record (like customer). So if scope can deal with multi customer, client should submit customer id also
 
 Request from client
-```bash
+```http
 Customer :  1231221231
-Autorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+Autorization : bearer eyJhbGciOiJIUzI1...
 Sample-Data-1 : When you stare into the abyss the abyss stares back at you
 Sample-Data-2 : The real world is much smaller than the imaginary
 ```
 
 To Upstream 
-```bash
+```javascript
 X-User-Reference :  38653069009
 X-Scope-Reference :  BURGAN
 X-Client-Name :  Backoffice
