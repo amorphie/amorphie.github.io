@@ -62,14 +62,33 @@ it is essential to include specific information about the scope, client, and use
 
 !> All data will be transmitted as header to upstream for every request.
 
-```html
-~~X-User-ID :  g664d72c-1408-4307-973c-bd74e3d8a185~~.
+```markup
 X-User-Reference :  38653069009
-~~X-Scope-ID :  a664d72c-1408-4307-973c-bd74e3d8a185~~
 X-Scope-Reference :  38653069009
-~~X-Client-ID :  a664d72c-1408-4307-973c-bd74e3d8a185~~
 X-Client-Name :  BKM
 X-Client-Variant :  Akbank
 X-Consent-Data-Documents : "...json..."
 X-Consent-Data-Accounts : "[ \"195f2ab8-8d4f-40c8-b4f9-3fac0f254c49\",  \"ddac1206-0413-4dc3-8ddd-e982fac8b472\",  \"a2ae3bb4-4024-4627-bd87-ac63893dd8e3\",  \"949602de-b893-4d07-a662-cc005a1c99b6\",  \"7947834b-96a7-48e1-9034-546aa2db0f9e\"]"
+```
+
+
+!> Some scopes allow to access more than one master record (like customer). So if scope can deal with multi customer, client should submit customer id also
+
+Request from client
+```bash
+Customer :  1231221231
+Autorization : bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+Sample-Data-1 : When you stare into the abyss the abyss stares back at you
+Sample-Data-2 : The real world is much smaller than the imaginary
+```
+
+To Upstream 
+```bash
+X-User-Reference :  38653069009
+X-Scope-Reference :  BURGAN
+X-Client-Name :  Backoffice
+X-Client-Data-Customer :  1231221231
+X-Client-Data-Sample-Data-1 : When you stare into the abyss the abyss stares back at you
+X-Client-Data-Sample-Data-2 : The real world is much smaller than the imaginary
+X-Consent-Data-Documents : "...json..."
 ```
