@@ -63,11 +63,11 @@ it is essential to include specific information about the scope, client, and use
 !> All data will be transmitted as header to upstream for every request.
 
 ```html
-X-User-ID :  g664d72c-1408-4307-973c-bd74e3d8a185
+~~X-User-ID :  g664d72c-1408-4307-973c-bd74e3d8a185~~.
 X-User-Reference :  38653069009
-X-Scope-ID :  a664d72c-1408-4307-973c-bd74e3d8a185
+~~X-Scope-ID :  a664d72c-1408-4307-973c-bd74e3d8a185~~
 X-Scope-Reference :  38653069009
-X-Client-ID :  a664d72c-1408-4307-973c-bd74e3d8a185
+~~X-Client-ID :  a664d72c-1408-4307-973c-bd74e3d8a185~~
 X-Client-Name :  BKM
 X-Client-Variant :  Akbank
 X-Consent-Data-Documents : "...json..."
