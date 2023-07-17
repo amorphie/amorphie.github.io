@@ -1,4 +1,11 @@
-# Definition
+# Client
+
+Clients are entities that can request Amorphie to authenticate a user. Most often, clients are applications and services that want to use Amorphie to secure clients and provide a single sign-on solution.
+
+There is the concept of **variant** for compatibility with 3rd party gateways (like PSD2 Gateway) and API keys. You can assume variants as sub client definition. It does not need to be predefined like the client. A variant can crate automatically on first access.
+
+
+## Definition
 In OAuth 2.0, Client represents an application or service that wants to access protected resources on behalf of an end-user. The client is an essential component in the OAuth 2.0 framework and plays a crucial role in the authorization process.
 
 The purpose of the client in OAuth 2.0 is to initiate the authorization process and obtain authorization from the resource owner (end-user) to access their protected resources. The client can be a web application, a mobile application, a server-side application, or any other software component that needs to access protected resources.
@@ -18,12 +25,6 @@ The client is typically registered with the authorization server, and during the
 6. Access Protected Resources: The client uses the obtained access token to authenticate itself and access the protected resources from the resource server on behalf of the resource owner.
 
 By acting as an intermediary between the resource owner and the resource server, the client enables secure and controlled access to protected resources without requiring the resource owner to share their credentials directly with the client. This separation of concerns improves security and allows users to control the access privileges granted to client applications.
-
-# Client
-
-Clients are entities that can request Amorphie to authenticate a user. Most often, clients are applications and services that want to use Amorphie to secure clients and provide a single sign-on solution.
-
-There is the concept of **variant** for compatibility with 3rd party gateways (like PSD2 Gateway) and API keys. You can assume variants as sub client definition. It does not need to be predefined like the client. A variant can crate automatically on first access.
 
 ## Model
 
