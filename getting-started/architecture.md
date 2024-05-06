@@ -24,7 +24,3 @@ flowchart TD;
 </div>  
 
 
-{% if page.mermaid }
-  {% if page.mermaid }
-  {% include mermaid.html %}
-{% endif %}
