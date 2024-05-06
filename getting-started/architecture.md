@@ -1,14 +1,9 @@
 # Architecture
 
-<div hidden>
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
-@startuml firstDiagram
-
-Alice -> Bob: Hello
-Bob -> Alice: Hi!
-		
-@enduml
-```
-</div>
-
-![](firstDiagram.svg)
