@@ -1,3 +1,8 @@
+---
+layout: spec
+mermaid: true
+---
+
 # Architecture
 
 ```mermaid
